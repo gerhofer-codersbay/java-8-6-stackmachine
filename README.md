@@ -5,7 +5,7 @@
 Implementieren eine Programm, welches einen in Infixnotation gegebenen arithmetischen Ausdruck mit
 Vorrang in seine [Postfixnotation(umgekehrte polnische Notation, UPN)](https://de.wikipedia.org/wiki/Umgekehrte_polnische_Notation) umwandelt und dann den Wert dieses
 Ausdrucks mit Hilfe einer Stackmachine berechnet. So muss zum Beispiel der arithmetische Ausdruck „5 ·(((9+
-7)/(8−4))+7)“ zuerst in eine UPN-Darstellung „5 9 7 + 8 4 − /7 + ·“ umgewandelt und dann zu „55“ vereinfacht
+7)/(8−4))+7)“ zuerst in eine UPN-Darstellung „5 9 7 + 8 4 - /7 + ·“ umgewandelt und dann zu „55“ vereinfacht
 werden. 
 
 Der Einfachheit halber darfst du davon ausgehen, dass der arithmetische Ausdruck fehlerfrei angegeben ist. 
@@ -34,8 +34,8 @@ Zur Inspiration für die Infix- in Postfixnotationsumwandlung hier ein in Pseudo
 Das Ausrechnen eines Ausdrucks in Postfix notation ist dann relativ simpel. Man liest von links nach rechts zahlen ein, trifft man einen operator, wendet man diesen auf die beiden zu letzt gesehenen Zahlen an und ersetzt diese Zahl mit der neuen. 
 
 ```
-5 9 7 + 8 4 − /7 + ·
-5 16 8 4 − /7 + ·
+5 9 7 + 8 4 - /7 + ·
+5 16 8 4 - /7 + ·
 5 16 4 /7 + ·
 5 4 7 + ·
 5 11 ·
